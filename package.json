@@ -4,10 +4,9 @@
   "description": "",
   "main": "cucumber.js",
   "scripts": {
-    "test": "cross-env ENV=qa cucumber-js",
-    "posttest": "node src/test/helper/report.mts",
-    "open-report": "start reports\\index.html",
-    "test:report": "cucumber-js && node reports/generateReport.js && start reports\\index.html"
+  "test": "cross-env ENV=qa cucumber-js",
+  "posttest": "node src/test/helper/report.js"
+
   },
   "keywords": [],
   "author": "",
