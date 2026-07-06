@@ -1,13 +1,17 @@
-import { generate } from "multiple-cucumber-html-reporter";
+const report = require("multiple-cucumber-html-reporter");
 
-generate({
+report.generate({
     jsonDir: "reports",
     reportPath: "reports/html",
+    reportName: "Automation Exercise Report",
+    pageTitle: "Automation Exercise Report",
+    displayDuration: true,
+    openReportInBrowser: false,
 
     metadata: {
         browser: {
-            name: "chrome",
-            version: "latest"
+            name: "Chrome",
+            version: "Latest"
         },
         device: "Local Machine",
         platform: {
@@ -20,7 +24,7 @@ generate({
         title: "Execution Information",
         data: [
             { label: "Project", value: "Automation Exercise" },
-            { label: "Framework", value: "Playwright + Cucumber" },
+            { label: "Framework", value: "Playwright + Cucumber + TypeScript" },
             { label: "Environment", value: "QA" }
         ]
     }
