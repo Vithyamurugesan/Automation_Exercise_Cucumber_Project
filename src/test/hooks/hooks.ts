@@ -10,6 +10,7 @@ import { ProductPage } from "../pages/ProductPage";
 import { RegisterPage } from "../pages/RegisterPage";
 import { ReviewPage } from "../pages/ReviewPage";
 import { setDefaultTimeout } from "@cucumber/cucumber";
+import { SearchPage } from "../pages/SearchPage";
 
 setDefaultTimeout(60000);
 let browser: Browser;
@@ -32,6 +33,7 @@ Before(async function (this: CustomWorld) {
     this.pp=new ProductPage(this.page)
     this.rp=new RegisterPage(this.page)
     this.arp=new ReviewPage(this.page);
+    this.sp = new SearchPage(this.page);
 });
 
 After(async function (this: CustomWorld, { result, pickle }) {

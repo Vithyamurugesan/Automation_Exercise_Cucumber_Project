@@ -1,7 +1,7 @@
 import * as dotenv from "dotenv";
 
 export const getEnv = () => {
-    if (process.env.ENV) {
+    if (process.env.ENV||'qa') {
         dotenv.config({
             override: true,
             path: `ENV/.env.${process.env.ENV}`

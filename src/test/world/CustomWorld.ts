@@ -7,6 +7,7 @@ import { DashboardPage } from '../pages/DashboardPage';
 import { ProductPage } from '../pages/ProductPage';
 import { RegisterPage } from '../pages/RegisterPage';
 import { ReviewPage } from '../pages/ReviewPage';
+import { SearchPage } from '../pages/SearchPage';
 
 export class CustomWorld extends World{
     browser!:Browser;
@@ -19,4 +20,5 @@ export class CustomWorld extends World{
     pp!:ProductPage
     rp!:RegisterPage
     arp!:ReviewPage
+    sp!:SearchPage
 }

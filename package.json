@@ -5,7 +5,9 @@
   "main": "cucumber.js",
   "scripts": {
     "test": "cross-env ENV=qa cucumber-js",
-    "posttest": "node src/test/helper/report.mts"
+    "posttest": "node src/test/helper/report.mts",
+    "open-report": "start reports\\index.html",
+    "test:report": "cucumber-js && node reports/generateReport.js && start reports\\index.html"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +17,7 @@
     "@playwright/test": "^1.61.1",
     "@types/node": "^26.1.0",
     "cross-env": "^10.1.0",
+    "open": "^11.0.0",
     "ts-node": "^10.9.2"
   },
   "dependencies": {
