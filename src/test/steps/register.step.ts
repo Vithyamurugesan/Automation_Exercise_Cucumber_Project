@@ -4,24 +4,24 @@ import { readRegisterData, RegisterData } from "../utils/excelReader";
 import { expect } from "@playwright/test";
 const users: RegisterData[] = readRegisterData();
 Given('user is on the homepage',async function (this:CustomWorld) {
-  // Write code here that turns the phrase above into concrete actions
+
   await this.hp.navigate();
 
 });
 
 When('user clicks on the loginpage',async function (this:CustomWorld) {
-  // Write code here that turns the phrase above into concrete actions
+ 
   await this.hp.clickLogin()
 });
 
 When('user enters valid name and email', async function (this: CustomWorld) {
-  // Write code here that turns the phrase above into concrete actions
-  await this.lp.setName("Tamil");
-  await this.lp.setemail("tamil@"+Date.now())
+
+  await this.lp.setName("Vithya");
+  await this.lp.setemail("vithyamurugesan1@"+Date.now())
 });
 
 When('user clicks on signup', async function (this: CustomWorld) {
-  // Write code here that turns the phrase above into concrete actions
+
   await this.lp.clickSignUp();
 });
 
@@ -44,6 +44,6 @@ When('user clicks on create account', async function (this: CustomWorld) {
 });
 
 Then('account should be created successfully', async function (this: CustomWorld) {
-  // Write code here that turns the phrase above into concrete actions
+
   await expect("Account Created!").toBe(await this.rp.getCreated())
 });
