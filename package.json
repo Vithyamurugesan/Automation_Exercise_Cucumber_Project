@@ -5,7 +5,7 @@
   "main": "cucumber.js",
   "scripts": {
     "test": "cross-env ENV=qa cucumber-js",
-    "posttest": "node src/test/helper/report.js"
+    "posttest": "node src/test/helper/report.ts"
   },
   "keywords": [],
   "author": "",
